@@ -9,8 +9,9 @@ const dist = "./dist/";
 // const dist = "C:/MAMP/htdocs/test"; // link on your folder with server
 
 gulp.task("build-style", () => {
-  return gulp.src("./src/assets/sass/style.scss")
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+  return gulp.src("./src/assets/sass/main.scss")
+    // .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./src/assets/css'))
     .pipe(browsersync.stream());
 });
@@ -54,7 +55,7 @@ gulp.task("build-js", () => {
 });
 
 gulp.task("copy-assets", () => {
-  return gulp.src(["!.src/assets/sass/**/*", "./src/assets/**/*.*"])
+  return gulp.src(["./src/assets/**/*.*"])
     .pipe(gulp.dest(dist + "/assets"))
     .on("end", browsersync.reload);
 });
@@ -72,12 +73,12 @@ gulp.task("watch", () => {
   });
 
   gulp.watch("./src/*.html", gulp.parallel("copy-html"));
+  gulp.watch('./src/assets/sass/**/*.scss', gulp.parallel("build-style"));
   gulp.watch("./src/assets/**/*.*", gulp.parallel("copy-assets"));
   gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
-  gulp.watch("./src/assets/css/*.css", gulp.parallel("build-style"));
 });
 
-gulp.task("build", gulp.parallel("copy-html", "copy-assets", "build-js", "build-style"));
+gulp.task("build", gulp.parallel("copy-html", "build-style", "copy-assets", "build-js"));
 
 gulp.task("build-prod-js", () => {
   return gulp.src("./src/js/main.js")
