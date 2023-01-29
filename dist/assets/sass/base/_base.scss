@@ -9,29 +9,30 @@ body {
   position: relative;
   font-size: $fontSize;
   font-family: $fontFamilyMain;
-  color: $color-text-primary;
-  background-color: $color-main;
-
+  color: $color-white;
+  background-color: $color-main-body;
+  
+  // scroll bar
   /* width */
-  &::-webkit-scrollbar {
-    width: 15px;
-  }
+  // &::-webkit-scrollbar {
+  //   width: 15px;
+  // }
 
   /* Track */
-  &::-webkit-scrollbar-track {
-    background: $color-title;
-  }
+  // &::-webkit-scrollbar-track {
+  //   background: $color-title;
+  // }
 
   /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $color-main;
-    // border-radius: 5px;
-  }
+  // &::-webkit-scrollbar-thumb {
+  //   background: $color-main;
+  //   border-radius: 5px;
+  // }
 
   /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  // &::-webkit-scrollbar-thumb:hover {
+  //   background: #555;
+  // }
 
   &._lock {
     overflow: hidden;
