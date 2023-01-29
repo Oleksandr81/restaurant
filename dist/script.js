@@ -25,12 +25,7 @@ const menuBuger = burgerSelector => {
   function activeMenu() {
     burgerIcon.classList.toggle('_active');
     menu.classList.toggle('show-menu');
-    if (burgerIcon.classList.contains('_active')) {
-      document.body.style.overflow = 'hidden';
-      menu.style.height = `${intViewportHeight}px`;
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.classList.toggle('lock');
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuBuger);

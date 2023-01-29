@@ -1,0 +1,44 @@
+.main {
+  background-color: $color-main-body;
+
+  // .main__wrapper
+  &__wrapper {
+    position: relative;
+    max-width: $content-width;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  // .main__container
+  &__container {
+    max-width: $block-width;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  // .main__hashtag
+  &__hashtag {
+    position: absolute;
+    top: 50%;
+    left: -55px;
+    display: flex;
+    gap: 40px;
+    transform: rotate(-90deg);
+    font-size: 1.8rem;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    color: inherit;
+
+    @media(max-width: 1700px) {
+      display: none;      
+    }
+  }
+
+  // .main__body
+  &__body {
+    padding: 48px 0 170px;
+  }
+
+  // .main__slider
+  &__slider {}
+}

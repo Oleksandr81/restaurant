@@ -24,21 +24,23 @@
 
   // .order__login
   &__login {
-    color: inherit
+    color: $color-text;
   }
 
   // .order__slash
-  &__slash {}
+  &__slash {
+    color: $color-text;
+  }
 
   // .order__registration
   &__registration {
-    color: inherit;
+    color: $color-text;
     text-transform: capitalize;
   }
 
   // .order__tab
   &__tab {
-    margin: 0 50px;
+    margin: 0 25px;
     display: block;
     height: 57px;
     width: 1px;

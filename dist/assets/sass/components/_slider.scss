@@ -1,0 +1,24 @@
+.main {
+  // .main__slider
+  &__slider {
+  }
+}
+.slider {
+  // .slider__slide
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .slider__text-block
+  &__text-block {
+    flex: 0 1 50%;
+  }
+  // .slider__imgs-block
+  &__imgs-block {
+    flex: 0 1 50%;
+  }
+}
+
+
+

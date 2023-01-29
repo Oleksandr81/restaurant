@@ -6,9 +6,17 @@
 @import "./base/base";
 
 // Components
+  //header
 @import "./components/menu";
 @import "./components/menu-order";
 @import "./components/menu-burger";
+  //main
+@import "./components/button";
+@import "./components/hashtag";
+@import "./components/imgs-block";
+@import "./components/slider";
+@import "./components/text-block-main";
 
 // Layouts
 @import "./layouts/header";
+@import "./layouts/main";

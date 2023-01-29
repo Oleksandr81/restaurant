@@ -147,14 +147,17 @@ body._lock {
   }
 }
 .order__login {
-  color: inherit;
+  color: #aaaaaa;
+}
+.order__slash {
+  color: #aaaaaa;
 }
 .order__registration {
-  color: inherit;
+  color: #aaaaaa;
   text-transform: capitalize;
 }
 .order__tab {
-  margin: 0 50px;
+  margin: 0 25px;
   display: block;
   height: 57px;
   width: 1px;
@@ -225,6 +228,149 @@ body._lock {
   }
 }
 
+.button__block {
+  display: inline-block;
+  background-color: #dcca87;
+  border: 1px solid #dcca87;
+  transition: all 0.5s ease-in;
+}
+.button__block:hover {
+  background-color: #0c0b08;
+}
+.button__text {
+  display: inline-block;
+  font-family: "Cormorant Upright";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #0c0b08;
+  padding: 8px 32px;
+}
+.button__text:hover {
+  color: #dcca87;
+}
+
+.imgs-block {
+  position: relative;
+  width: 650px;
+  height: 688px;
+  text-align: center;
+}
+.imgs-block__img {
+  position: relative;
+  z-index: 1;
+}
+.imgs-block__img::before {
+  position: absolute;
+  content: "";
+  top: -24px;
+  right: -12px;
+  width: 70%;
+  height: 70%;
+  background-color: #dcca87;
+  z-index: -1;
+}
+.imgs-block__img::after {
+  position: absolute;
+  content: "";
+  bottom: -24px;
+  left: -12px;
+  width: 70%;
+  height: 70%;
+  background-color: #dcca87;
+  z-index: -1;
+}
+.imgs-block__arrow {
+  border: solid #dcca87;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 6px;
+  transition: all 0.5s ease;
+}
+.imgs-block__arrow.next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.imgs-block__arrow.prev {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.imgs-block__button {
+  position: absolute;
+  bottom: 40px;
+  width: 50px;
+  height: 40px;
+  background-color: #0c0b08;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.imgs-block__button:hover .imgs-block__arrow {
+  border-color: #0c0b08;
+}
+.imgs-block__button.button-prev {
+  left: 0;
+  background: linear-gradient(to right, #0c0b08 50%, #dcca87 50%) left;
+  background-size: 200% 100%;
+}
+.imgs-block__button.button-prev:hover {
+  background-position: right;
+}
+.imgs-block__button.button-next {
+  left: 50px;
+  background: linear-gradient(to left, #0c0b08 50%, #dcca87 50%) right;
+  background-size: 200% 100%;
+}
+.imgs-block__button.button-next:hover {
+  background-position: left;
+}
+
+.slider__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__text-block {
+  flex: 0 1 50%;
+}
+.slider__imgs-block {
+  flex: 0 1 50%;
+}
+
+.text-block__body {
+  max-width: 460px;
+}
+.text-block__subtitle {
+  font-family: "Cormorant Upright";
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.text-block__img {
+  padding: 8px 0;
+}
+.text-block__title {
+  font-family: "Cormorant Upright";
+  font-weight: 700;
+  font-size: 9rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #DCCA87;
+}
+.text-block__text {
+  padding: 32px 0;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #aaaaaa;
+}
 .header__container {
   max-width: 1710px;
   padding: 0 15px;
@@ -244,4 +390,38 @@ body._lock {
   line-height: 1.3;
   letter-spacing: 0.04em;
   color: inherit;
+}
+.main {
+  background-color: #0c0b08;
+}
+.main__wrapper {
+  position: relative;
+  max-width: 1710px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.main__container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.main__hashtag {
+  position: absolute;
+  top: 50%;
+  left: -55px;
+  display: flex;
+  gap: 40px;
+  transform: rotate(-90deg);
+  font-size: 1.8rem;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: inherit;
+}
+@media (max-width: 1700px) {
+  .main__hashtag {
+    display: none;
+  }
+}
+.main__body {
+  padding: 48px 0 170px;
 }
