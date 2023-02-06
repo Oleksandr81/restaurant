@@ -9,14 +9,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media(max-width: $tablet-width) {
+      flex-direction: column;
+      gap: 45px;
+    }
   }
   // .slider__text-block
   &__text-block {
     flex: 0 1 50%;
+    @media(max-width: $tablet-width) {
+      flex: 0 1 100%;
+    }
   }
   // .slider__imgs-block
   &__imgs-block {
     flex: 0 1 50%;
+    @media(max-width: $tablet-width) {
+      flex: 0 1 100%;
+    }
   }
 }
 

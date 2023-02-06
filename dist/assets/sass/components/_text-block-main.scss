@@ -1,7 +1,12 @@
 .text-block {
   // .text-block__body
   &__body {
-    max-width: 460px;
+    max-width: 480px;
+    padding-right: 20px;
+
+    @media(max-width: $tablet-width) {
+      max-width: 100%;
+    }
   }
   // .text-block__subtitle
   &__subtitle {
@@ -25,6 +30,13 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
     color: #DCCA87;
+
+    @media(max-width: $laptop-width) {
+      font-size: 5.5rem;
+    }
+    @media(max-width: $tablet-width) {
+      font-size: 4.5rem;
+    }
   }
   // .text-block__text
   &__text {
