@@ -23,7 +23,7 @@
   letter-spacing: 0.04em;
   color: $color-text;
 
-  @media(max-width: $mobile-dig-width) {
+  @media(max-width: $mobile-big-width) {
     width: 280px;
   }
 

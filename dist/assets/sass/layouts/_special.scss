@@ -1,0 +1,23 @@
+.special {
+  // .special__container
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    // padding: 0 25px;
+  }
+  // .special__body
+  &__body {
+    padding: 152px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+  }
+  // .special__text-block
+  &__text-block {
+    text-align: center;
+  }
+  // .special__menu-block
+  &__menu-block {
+  }
+}
