@@ -1,0 +1,32 @@
+.book {
+
+  // .book__wrapper
+  &__wrapper {
+  }
+  // .book__container
+  &__container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 155px 15px;
+  }
+  // .book__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    text-align: center;
+    background-color: $color-second-body;
+    padding: 48px 0;
+    border: 0.1px solid;
+    border-color: rgba($color-title, 0.2);
+    box-sizing: border-box;
+  }
+  // .book__block
+  &__block {
+  }
+  // .book__form
+  &__form {
+  }
+}
+

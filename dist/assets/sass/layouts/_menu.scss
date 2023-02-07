@@ -1,0 +1,21 @@
+.menu {
+  // .menu__wrapper
+  &__wrapper {
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/menu/bg-menu.jpg)50% 50%/100% 100% no-repeat;
+    
+    @media(max-width: laptop-width) {
+      background: url(../img/menu/bg-menu.jpg)center 0/auto 100% no-repeat;
+    }
+  }
+  // .menu__container
+  &__container {
+  }
+  // .menu__list
+  &__list {
+  }
+  // .menu__item
+  &__item {
+  }
+}

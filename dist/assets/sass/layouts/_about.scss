@@ -2,10 +2,8 @@
 
   // .about__wrapper
   &__wrapper {
-    background: url(../img/about/bg.jpg)0 0/100% 100% no-repeat fixed;
-    @media(max-width: $content-width) {
-      background: url(../img/about/bg.jpg)center 0/auto 100% no-repeat fixed;
-    }
+    background: url(../img/about/bg.jpg)50% 50% no-repeat fixed;
+    background-size: cover;
   }
   // .about__container
   &__container {

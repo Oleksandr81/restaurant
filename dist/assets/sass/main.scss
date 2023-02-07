@@ -18,8 +18,11 @@
 @import "./components/text-block-main";
   //about
 @import "./components/text-block";
+@import "./components/input-book";
 
 // Layouts
 @import "./layouts/header";
 @import "./layouts/main";
 @import "./layouts/about";
+@import "./layouts/book";
+@import "./layouts/menu-list";

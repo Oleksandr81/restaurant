@@ -1,9 +1,10 @@
 $color-white: #ffffff;
 // $color-text-primary: #ffffff;
 $color-main-body: #0c0b08;
+$color-second-body: #0c0c0c;
 // $color-paragraph: #252525;
 // $color-main-primary: #34c759;
-// $color-subtitle: #d9d9d9;
+$color-border-input: #f5efdb;
 $color-title: #dcca87;
 $color-text: #aaaaaa;
 ;
@@ -14,7 +15,7 @@ $content-width: 1710px; // 1680 + 2*15px padding
 $block-width: 1330px; // 1300 + 2*15px padding
 $laptop-width: 1099.9px;
 $tablet-width: 768px;
-// $mobile-dig-width: 480px; // 480 Samsung
+$mobile-dig-width: 480px; // 480 Samsung
 // $mobile-small-width: 320px;
 
 $fontSize: 1.6rem;
@@ -25,5 +26,5 @@ $md1: 1024px;
 $md2: 870px;
 $md3: 769px;
 $md4: 600px;
-// $md5: 400px;
+// $md5: 500px;
 // $md6: 320px;
