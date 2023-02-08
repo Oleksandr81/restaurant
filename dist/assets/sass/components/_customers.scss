@@ -1,0 +1,28 @@
+.block-customers {
+
+  // .block-customers__item
+  &__item {
+    display: flex;
+    gap: 32px;
+    // max-width: 634px;
+    align-items: top;
+    flex: 0 1 48%;
+  }
+  // .block-customers__img
+  &__img {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      content: "";
+      width: 47px;
+      height: 40px;
+      background: url(../icons/quotes.svg);
+    }
+  }
+  // .block-customers__text-block
+  &__text-block {
+  }
+}

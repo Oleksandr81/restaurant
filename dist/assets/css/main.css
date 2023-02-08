@@ -683,6 +683,50 @@ body._lock {
     width: 85%;
   }
 }
+.block-customers__item {
+  display: flex;
+  gap: 32px;
+  align-items: top;
+  flex: 0 1 48%;
+}
+@media (max-width: 870px) {
+  .block-customers__item {
+    flex: 0 1 47%;
+  }
+}
+@media (max-width: 480px) {
+  .block-customers__item {
+    flex-direction: column;
+    flex: 0 1 100%;
+  }
+}
+.block-customers__img-item {
+  position: relative;
+}
+@media (max-width: 870px) {
+  .block-customers__img-item img {
+    width: 140px;
+  }
+}
+@media (max-width: 480px) {
+  .block-customers__img-item img {
+    width: 190px;
+  }
+}
+.block-customers__img-item::after {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  content: "";
+  width: 47px;
+  height: 40px;
+  background: url(../icons/quotes.svg);
+}
+@media (max-width: 480px) {
+  .block-customers__img-item {
+    width: 190px;
+  }
+}
 .header__container {
   max-width: 1710px;
   padding: 0 15px;
@@ -1006,4 +1050,40 @@ body._lock {
 }
 .chefs-words.text-block__text {
   padding: 8px 0 64px 0;
+}
+
+.customers__container {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.customers__body {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  padding: 152px 0;
+}
+.customers__text-block {
+  text-align: center;
+}
+.customers__block-customers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 64px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .customers__block-customers {
+    flex-direction: column;
+  }
+}
+
+.text-block__text-name {
+  padding: 16px 0 4px;
+}
+.text-block__text {
+  padding: 0;
 }

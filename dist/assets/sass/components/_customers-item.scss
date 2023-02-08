@@ -1,0 +1,48 @@
+.block-customers {
+
+  // .block-customers__item
+  &__item {
+    display: flex;
+    gap: 32px;
+    align-items: top;
+    flex: 0 1 48%;
+
+    @media(max-width: $md2) {
+      flex: 0 1 47%;
+    }
+    @media(max-width: $mobile-big-width) {
+      flex-direction: column;
+      flex: 0 1 100%;
+    }
+  }
+  // .block-customers__img
+  &__img {}
+
+  &__img-item {
+    position: relative;
+
+    & img{
+      @media(max-width: $md2) {
+        width: 140px;
+      }
+      @media(max-width: $mobile-big-width) {
+        width: 190px;
+      }
+    }
+    &::after {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      content: "";
+      width: 47px;
+      height: 40px;
+      background: url(../icons/quotes.svg);
+    }
+    @media(max-width: $mobile-big-width) {
+      width: 190px;
+    }
+  }
+  // .block-customers__text-block
+  &__text-block {
+  }
+}
