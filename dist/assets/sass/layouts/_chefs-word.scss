@@ -1,0 +1,129 @@
+.chefs-words {
+  position: relative;
+  background: url(../img/about/bg.jpg)50% 50% no-repeat fixed;
+  background-size: cover;
+  z-index: -2;
+
+  // .chefs-words__container
+  &__container {
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  // .chefs-words__body
+  &__body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 152px 0;
+
+    @media(max-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+
+  // .chefs-words__img-block
+  &__img-block {
+    padding-left: 20px;
+
+    @media(max-width: $tablet-width) {
+      padding-left: 0;
+      padding-bottom: 75px;
+    }
+    @media(max-width: $tablet-width) {
+      padding: 0 15px 75px;
+    }
+  }
+
+  // .chefs-words__text-block
+  &__text-block {
+    flex: 0 1 50%;
+  }
+}
+
+.img-block {
+
+  // .img-block__img
+  &__img {
+
+    & img {
+      @media(max-width: $block-width) {
+        width: 500px;
+      }
+
+      @media(max-width: $laptop-width) {
+        width: 400px;
+      }
+
+      @media(max-width: $tablet-width) {
+        width: 100%;
+      }
+    }
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 50%;
+      top: -20px;
+      right: -20px;
+      background-color: $color-title;
+      z-index: -1;
+
+      @media(max-width: $laptop-width) {
+        top: -15px;
+        right: -15px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 50%;
+      bottom: -20px;
+      left: -20px;
+      background-color: $color-title;
+      z-index: -1;
+
+      @media(max-width: $laptop-width) {
+        bottom: -15px;
+        left: -15px;
+      }
+    }
+  }
+}
+
+.chefs-words {
+
+  &.text-block {
+
+    // .text-block__chefs
+    &__chefs {
+      padding-left: 95px;
+
+      @media(max-width: $block-width) {
+        padding-left: 65px;
+      }
+
+      @media(max-width: $tablet-width) {
+        padding: 0;
+        max-width: 616px;
+      }
+    }
+
+    // .text-block__text-italic
+    &__text-italic {
+      padding: 64px 0;
+    }
+
+    // .text-block__text
+    &__text {
+      padding: 8px 0 64px 0;
+    }
+  }
+}
