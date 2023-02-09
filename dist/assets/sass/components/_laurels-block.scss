@@ -1,0 +1,9 @@
+.item-laurels {
+  // .item-laurels__block
+  &__block {
+    display: flex;
+    align-items: center;
+    flex: 0 1 47%;
+    gap: 32px;
+  }
+}

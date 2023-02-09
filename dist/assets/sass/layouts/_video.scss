@@ -1,0 +1,32 @@
+.video {
+
+  // .video__wrapper
+  &__wrapper {
+    position: relative;
+    background: url(../img/video/video-cover.png)50% 50% no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  // .video__button
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  // .video__img
+  &__img {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+    @media(max-width: $tablet-width) {
+      top: 5%;
+      left: -73px;
+    }
+  }
+}

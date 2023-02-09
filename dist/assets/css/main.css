@@ -727,6 +727,13 @@ body._lock {
     width: 190px;
   }
 }
+.item-laurels__block {
+  display: flex;
+  align-items: center;
+  flex: 0 1 47%;
+  gap: 32px;
+}
+
 .header__container {
   max-width: 1710px;
   padding: 0 15px;
@@ -1086,4 +1093,104 @@ body._lock {
 }
 .text-block__text {
   padding: 0;
+}
+
+.video__wrapper {
+  position: relative;
+  background: url(../img/video/video-cover.png) 50% 50% no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.video__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+.video__img {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+@media (max-width: 768px) {
+  .video__img {
+    top: 5%;
+    left: -73px;
+  }
+}
+
+.laurels {
+  background: url(../img/about/bg.jpg) 50% 50% no-repeat fixed;
+  background-size: cover;
+}
+.laurels__container {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.laurels__body {
+  padding: 128px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .laurels__body {
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+.laurels__block {
+  padding-top: 64px;
+  max-width: 634px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 64px;
+  column-gap: 32px;
+}
+@media (max-width: 1099.9px) {
+  .laurels__block {
+    flex-direction: column;
+  }
+}
+
+.img-block-laurels__img {
+  position: relative;
+  padding-left: 80px;
+}
+@media (max-width: 1330px) {
+  .img-block-laurels__img img {
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .img-block-laurels__img img {
+    width: 100%;
+  }
+}
+.img-block-laurels__img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  background: url(../img/laurels/G.svg) 0 0 no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 379px;
+}
+@media (max-width: 480px) {
+  .img-block-laurels__img::after {
+    width: 300px;
+    bottom: -65px;
+    left: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .img-block-laurels__img::after {
+    width: 200px;
+    bottom: -170px;
+    left: 40px;
+  }
 }
