@@ -1,0 +1,101 @@
+.card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  cursor: grab;
+  max-width: 444px;
+  padding: 0 16px;
+  flex: 0 0 33.33%;
+
+  @media(max-width: $md2) {
+    flex: 0 0 50%;
+  }
+  @media(max-width: $md4) {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  &:hover .card-block__img img {
+    transform: scale(1.2);
+  }
+
+  // .card-block__img
+  &__img {
+    border: 1px solid;
+    border-color: rgba($color-title, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    // object-fit: cover;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+      object-fit: cover;
+    }
+  }
+
+  // .card-block__text-block
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 5px;
+    user-select: none;
+  }
+
+  // .card-block__date-block
+  &__date-block {
+    display: flex;
+    justify-content: space-between;
+
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    color: $color-line;
+  }
+
+  // .card-block__date
+  &__date {}
+
+  // .card-block__author
+  &__author {}
+
+  // .card-block__title
+  &__title {
+    display: inline!important;
+    position: relative;
+    font-family: $fontFamilyC;
+    font-size: 3.2rem;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: $color-title;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(transparent calc(100% - 2px), $color-title 2px);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+
+  // .card-block__text
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    color: $color-text;
+  }
+
+  // .card-block__read-more
+  &__read-more {
+    font-family: $fontFamilyC;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    color: $color-title;
+  }
+}

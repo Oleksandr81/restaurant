@@ -1,0 +1,34 @@
+.blog {
+  // .blog__container
+  &__container {
+    max-width: $block-width;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  // .blog__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 152px 0;
+    align-items: center;
+  }
+  // .blog__text-block
+  &__text-block {
+    text-align: center;
+  }
+  // .blog__cards-block
+  &__cards-block {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__cards-block-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  // .blog__card-block
+  &__card-block {
+  }
+}

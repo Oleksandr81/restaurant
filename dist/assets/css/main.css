@@ -734,6 +734,88 @@ body._lock {
   gap: 32px;
 }
 
+.card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  cursor: grab;
+  max-width: 444px;
+  padding: 0 16px;
+  flex: 0 0 33.33%;
+}
+@media (max-width: 870px) {
+  .card-block {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 600px) {
+  .card-block {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+.card-block:hover .card-block__img img {
+  transform: scale(1.2);
+}
+.card-block__img {
+  border: 1px solid;
+  border-color: rgba(220, 202, 135, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+}
+.card-block__img img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  object-fit: cover;
+}
+.card-block__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 5px;
+  user-select: none;
+}
+.card-block__date-block {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #fafafa;
+}
+.card-block__title {
+  display: inline !important;
+  position: relative;
+  font-family: "Cormorant Upright";
+  font-size: 3.2rem;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #dcca87;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-image: linear-gradient(transparent calc(100% - 2px), #dcca87 2px);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+}
+.card-block__title:hover {
+  background-size: 100% 100%;
+}
+.card-block__text {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #aaaaaa;
+}
+.card-block__read-more {
+  font-family: "Cormorant Upright";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  color: #dcca87;
+}
+
 .header__container {
   max-width: 1710px;
   padding: 0 15px;
@@ -1193,4 +1275,29 @@ body._lock {
     bottom: -170px;
     left: 40px;
   }
+}
+
+.blog__container {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.blog__body {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 152px 0;
+  align-items: center;
+}
+.blog__text-block {
+  text-align: center;
+}
+.blog__cards-block {
+  max-width: 100%;
+  overflow: hidden;
+}
+.blog__cards-block-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
