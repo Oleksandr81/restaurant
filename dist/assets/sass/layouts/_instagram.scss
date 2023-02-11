@@ -30,6 +30,11 @@
   &__text-block {
     min-width: 491px;
     padding-right: 64px;
+
+    @media(max-width: $tablet-width) {
+      min-width: 0;
+      padding-right: 0;
+    }
   }
 
   // .instagram__button
