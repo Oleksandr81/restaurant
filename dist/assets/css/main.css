@@ -82,6 +82,8 @@ body {
   font-family: "Open Sans";
   color: #ffffff;
   background-color: #0c0b08;
+  background-image: url("../img/main/wave-element.svg");
+  background-position: 0 0;
   /* width */
   /* Track */
   /* Handle */
@@ -829,6 +831,35 @@ body._lock {
   color: #dcca87;
 }
 
+.popup__scroll {
+  width: 60px;
+  cursor: pointer;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+
+.scroll-popup__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+.scroll-popup__line {
+  width: 1px;
+  height: 61px;
+  background: linear-gradient(to bottom, #dcca87, rgba(220, 202, 135, 0.24));
+}
+.scroll-popup__text {
+  font-family: "Cormorant Upright";
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #dcca87;
+}
+
 .header__container {
   max-width: 1710px;
   padding: 0 15px;
@@ -848,9 +879,6 @@ body._lock {
   line-height: 1.3;
   letter-spacing: 0.04em;
   color: inherit;
-}
-.main {
-  background-color: #0c0b08;
 }
 .main__wrapper {
   position: relative;
@@ -1027,9 +1055,6 @@ body._lock {
   width: 100%;
 }
 
-.special {
-  background-color: #0c0b08;
-}
 .special__container {
   max-width: 1300px;
   margin: 0 auto;

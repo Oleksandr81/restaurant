@@ -1,0 +1,40 @@
+.popup {
+
+  // .popup__scroll
+  &__scroll {
+    width: 60px;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+  }
+}
+
+.scroll-popup {
+
+  // .scroll-popup__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+  }
+
+  // .scroll-popup__line-img
+  &__line {
+    width: 1px;
+    height: 61px;
+    background: linear-gradient(to bottom, $color-title, rgba($color-title, 0.24), )
+  }
+
+  // .scroll-popup__text
+  &__text {
+    font-family: $fontFamilyC;
+    font-weight: 700;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-title;
+  }
+}
