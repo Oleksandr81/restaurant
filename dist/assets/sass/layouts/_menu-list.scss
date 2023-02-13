@@ -1,5 +1,5 @@
 .menu-list {
-// display: none;
+
   // .menu__wrapper
   &__wrapper {
     height: 100vh;
@@ -9,11 +9,22 @@
 
   // .menu__container
   &__container {
+    position: relative;
     max-width: 1970px;
     height: 100%;
     display: flex;
     align-items: center;
     margin: 0 auto;
+  }
+
+  &__img-logo {
+    position: absolute;
+    top: 10px;
+    left: 145px;
+
+    @media(max-width: $laptop-width) {
+      left: 26px;
+    }
   }
 
   // .menu__list
@@ -38,6 +49,9 @@
     text-transform: capitalize;
     cursor: pointer;
 
+
+
+
     @media(max-width: $laptop-width) {
       font-size: 4.5rem;
     }
@@ -50,22 +64,17 @@
   &__link {
     position: relative;
     color: $color-white;
-  }
-
-  &__line {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 0;
-    opacity: 0;
-    height: 2px;
-    background-color: $color-white;
     transition: all 0.5s ease;
+    background-image: linear-gradient(transparent calc(100% - 2px), $color-white 2px);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
 
-    &.active {
-      opacity: 1;
-      width: 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+
+    &._active {
+      background-size: 100% 100%;
     }
   }
 }

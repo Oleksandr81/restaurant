@@ -5,12 +5,23 @@
 
   // .footer__bg-top
   &__bg-top {
+    position: relative;
     height: 100%;
     background: linear-gradient(to bottom,
         $color-main-body 0%,
         $color-main-body 334px,
         rgba(175, 238, 238, 0) 334px,
         rgba(175, 238, 238, 0) 100%);
+  }
+
+  &__img-logo {
+    position: absolute;
+    top: -75px;
+    left: 80px;
+
+    @media(max-width: $mobile-big-width) {
+      left: -75px;
+    }
   }
 
   // .footer__container

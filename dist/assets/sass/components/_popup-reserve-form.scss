@@ -1,0 +1,101 @@
+.popup {
+  
+  // .popup__book
+  &__book {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    background-color: rgba($color-main-body, 0.8) ;
+  }
+}
+.book-popup {
+
+  // .book-popup__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  // .book-popup__container
+  &__container {
+    position: relative;
+    max-width: 550px;
+    padding: 15px;
+    // margin: 0 auto;
+  }
+  // .book-popup__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+    background-color: $color-second-body;
+    padding: 16px 0;
+    border: 0.1px solid;
+    border-color: rgba($color-title, 0.2);
+    box-sizing: border-box;
+  }
+  // .book-popup__text-block
+  &__text-block {
+  }
+  // .book-popup__form
+  &__form {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+.text-block {
+  // .text-block__subtitle
+  &__subtitle {
+  }
+  // .text-block__img
+  &__img {
+  }
+  // .text-block__title
+  &__title {
+    font-size: 3.6rem;
+  }
+}
+.input {
+
+  width: 212px;
+  height: 60px;
+  // .input__book-date
+  &__book-date {
+  }
+  // .input__book-time
+  &__book-time {
+  }
+}
+.input-section {
+}
+.book {
+  // .book__button
+  &__button {
+    padding-top: 32px;
+  }
+}
+.button {
+  // .button__block
+  &__block {
+  }
+  // .button__text
+  &__text {
+  }
+}

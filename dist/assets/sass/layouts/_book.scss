@@ -3,12 +3,31 @@
   // .book__wrapper
   &__wrapper {
   }
+
   // .book__container
   &__container {
+    position: relative;
     max-width: 1366px;
     margin: 0 auto;
     padding: 155px 15px;
   }
+
+  &__img-logo {
+    position: absolute;
+    top: -30px;
+    right: -150px;
+
+    @media(max-width: $content-width) {
+      right: 0;
+    }
+    @media(max-width: $laptop-width) {
+      right: 50px;
+    }
+    @media(max-width: $tablet-width) {
+      right: 15px;
+    }
+  }
+
   // .book__body
   &__body {
     display: flex;

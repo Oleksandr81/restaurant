@@ -1,9 +1,12 @@
 .menu {
   // .menu__burger
   &__burger {
+    
     display: none;
     margin: 15px 0;
+    
 
+    position: relative;
     @media(max-width: $md3) {
       display: block;
       position: relative;
@@ -11,6 +14,7 @@
       height: 18px;
       z-index: 3;
       cursor: pointer;
+      z-index: 11;
 
       & span,
       &::before,

@@ -10,7 +10,27 @@
     padding: 0 15px;
 
     @media(max-width: $md3) {
-      display: none;
+      position: absolute;
+      background-color: rgba($color-main-body, 0.95) ;
+      top: 0;
+      left: 0;
+      width: 70%;
+      height: 100vh;
+      flex-direction: column;
+      padding-left: 64px;
+      z-index: 10;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      padding: 100px 0 25px 0;
+      transition: all 0.7s ease;
+      overflow: auto;
+      opacity: 1;
+
+      &._active {
+        left: 0;
+        opacity: 1;
+      }
     }
   }
 
@@ -25,5 +45,24 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
     color: inherit;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(transparent calc(100% - 2px), $color-title 2px);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    
+    &._active {
+      color: $color-title;
+      background-size: 100% 100%;
+    }
+
+    &:hover {
+      color: $color-title;
+      background-size: 100% 100%;
+    }
+
+    @media(max-width: $md3) {
+      font-size: 3.6rem;
+      padding: 16px;
+    }
   }
 }
