@@ -30,6 +30,40 @@ const menuBuger = burgerSelector => {
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuBuger);
 
+/***/ }),
+
+/***/ "./src/js/modules/change-bg-menu.js":
+/*!******************************************!*\
+  !*** ./src/js/modules/change-bg-menu.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const changeBgMenu = () => {
+  const links = document.querySelectorAll('.menu-list__link'),
+    wrapper = document.querySelector('.menu-list__wrapper');
+  function removeActiveClass() {
+    links.forEach(link => {
+      link.classList.remove('_active');
+    });
+  }
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+    });
+    link.addEventListener('mouseenter', () => {
+      let bg = link.getAttribute('data-bg');
+      removeActiveClass();
+      link.classList.add('_active');
+      wrapper.style.backgroundImage = `url(assets/img/menu/${bg}.jpg)`;
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (changeBgMenu);
+
 /***/ })
 
 /******/ 	});
@@ -96,11 +130,14 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burger_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger-menu */ "./src/js/modules/burger-menu.js");
+/* harmony import */ var _modules_change_bg_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/change-bg-menu */ "./src/js/modules/change-bg-menu.js");
+
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   (0,_modules_burger_menu__WEBPACK_IMPORTED_MODULE_0__["default"])('.menu__burger');
+  (0,_modules_change_bg_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 })();
 
