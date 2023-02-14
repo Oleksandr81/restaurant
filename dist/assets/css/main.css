@@ -120,7 +120,7 @@ body._lock {
     position: absolute;
     background-color: rgba(12, 11, 8, 0.95);
     top: 0;
-    left: 0;
+    left: -100%;
     width: 70%;
     height: 100vh;
     flex-direction: column;
@@ -132,7 +132,7 @@ body._lock {
     padding: 100px 0 25px 0;
     transition: all 0.7s ease;
     overflow: auto;
-    opacity: 1;
+    opacity: 0;
   }
   .menu__list._active {
     left: 0;
@@ -153,7 +153,6 @@ body._lock {
 }
 .menu__link._active {
   color: #dcca87;
-  background-size: 100% 100%;
 }
 .menu__link:hover {
   color: #dcca87;
@@ -901,6 +900,7 @@ body._lock {
 }
 
 .popup__book {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;

@@ -24,8 +24,8 @@ const menuBuger = burgerSelector => {
   });
   function activeMenu() {
     burgerIcon.classList.toggle('_active');
-    menu.classList.toggle('show-menu');
-    document.body.classList.toggle('lock');
+    menu.classList.toggle('_active');
+    document.body.classList.toggle('_lock');
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuBuger);
