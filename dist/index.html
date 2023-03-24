@@ -8,10 +8,21 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <title>Resraurant</title>
 </head>
 
-<body>
+<body class="_lock">
+  <!-- loader -->
+  <div class="loader">
+    <div class="loader__container">
+      <div class="loader__img-logo img-logo">
+        <img class="logo-spoons logo__item" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+        <img class="logo-text logo__item" src="./assets/img/logo-text.svg" alt="logo-text">
+      </div>
+    </div>
+  </div>
+  <!-- header -->
   <header class="header">
     <div class="header__wrapper">
       <div class="header__container">
@@ -19,17 +30,50 @@
           <a href="#" class="header__logo">Gerícht</a>
           <div class="header__menu menu">
             <ul class="menu__list">
-              <li class="menu__item">
-                <a href="" class="menu__link _active">Home</a>
+              <li class="menu__item link-menu">
+                <a href="#top" class="menu__link">Home</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Pages</a>
+                <a href="#" class="menu__link">About
+                  <object class="menu__link-arrow-svg" type="image/svg+xml"
+                    data="./assets/icons/arrow-down.svg"></object>
+                </a>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem link-menu">
+                    <span class="menu__sublink-line"></span>
+                    <a href="#menu" class="menu__sublink">Menu</a>
+                  </li>
+                  <li class="menu__subitem link-menu">
+                    <span class="menu__sublink-line"></span>
+                    <a href="#about" class="menu__sublink">About</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <span class="menu__sublink-line link-menu"></span>
+                    <a href="#customers" class="menu__sublink">Customers</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item link-menu">
+                <a href="#book" class="menu__link link-menu">Book</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Contact Us</a>
+                <a href="#" class="menu__link">Awards
+                  <object class="menu__link-arrow-svg" type="image/svg+xml"
+                    data="./assets/icons/arrow-down.svg"></object>
+                </a>
+                <ul class="menu__sublist">
+                  <li class="menu__subitem link-menu">
+                    <span class="menu__sublink-line"></span>
+                    <a href="#blog" class="menu__sublink">Blog</a>
+                  </li>
+                  <li class="menu__subitem link-menu">
+                    <span class="menu__sublink-line"></span>
+                    <a href="#gallery" class="menu__sublink">Gallery</a>
+                  </li>
+                </ul>
               </li>
-              <li class="menu__item">
-                <a href="" class="menu__link">Blog</a>
+              <li class="menu__item link-menu">
+                <a href="#contact" class="menu__link link-menu">Contact us</a>
               </li>
             </ul>
             <div class="menu__burger">
@@ -38,18 +82,16 @@
           </div>
           <div class="header__order order">
             <div class="order__body">
-              <a href="" class="order__login">Log in</a>
-              <span class="order__slash">/</span>
-              <a href="#" class="order__registration">registration</a>
+              <a class="order__login" href="tel:+1 212-344-1230">+1 212-344-1230</a>
             </div>
             <div class="order__tab"></div>
-            <a href="#" class="order__book">book table</a>
+            <a href="#book" class="order__book">book table</a>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <main class="main">
+  <main id='top' class="main">
     <div class="main__wrapper">
       <div class="main__container">
         <div class="main__hashtag hashtag">
@@ -58,44 +100,189 @@
         </div>
         <div class="main__body">
           <div class="main__slider slider">
-            <div class="slider__slide">
-              <div class="slider__text-block text-block-slider">
-                <div class="text-block-slider__body">
-                  <div class="text-block-slider text-block__subtitle">Chase the new Flavour</div>
-                  <div class="text-block-slider text-block__img">
-                    <img src="./assets/icons/spoon.svg" alt="">
+            <div class="slider__body">
+
+
+              <div class="slider__text text-slider">
+                <div class="text-slider__inner">
+                  <div class="text-slider__item item-1">
+                    <div class="text-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-slider text-block__title">The key to Fine dining</div>
+                    <div class="text-slider text-block__text">Sit tellus lobortis sed senectus vivamus molestie.
+                      Condimentum volutpat
+                      morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus</div>
+                    <div class="text-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
                   </div>
-                  <div class="text-block-slider text-block__title">The key to Fine dining</div>
-                  <div class="text-block-slider text-block__text">Sit tellus lobortis sed senectus vivamus molestie.
-                    Condimentum volutpat
-                    morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus</div>
-                  <div class="text-block-slider text-block__button button">
-                    <a href="#" class="button__block">
-                      <span class="button__text">Explore Menu</span>
-                    </a>
+                  <div class="text-slider__item item-2">
+                    <div class="text-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-slider text-block__title">Food That Surprise You</div>
+                    <div class="text-slider text-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Unde corrupti animi repudiandae, numquam qui minima culpa ipsa, iure velit voluptate vitae porro
+                      laboriosam deserunt delectus natus illum? Illum, alias autem.</div>
+                    <div class="text-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="text-slider__item item-3">
+                    <div class="text-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-slider text-block__title">How to prepare your grill</div>
+                    <div class="text-slider text-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Alias hic tenetur, repellat aperiam quis vitae ullam sapiente provident, iusto id ad soluta.</div>
+                    <div class="text-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="slider__imgs-block imgs-block">
-                <div class="imgs-block__img img">
-                  <div class="img__slider">
-                    <img src="./assets/img/main/dish-1.jpg" alt="dish-1">
+              <div class="slider__img img-slider">
+                <div class="img-slider__inner">
+                  <div class="img-slider__item">
+                    <div class="img-slider__img-block">
+                      <div class="img-slider__img">
+                        <img src="./assets/img/main/dish-1.jpg" alt="dish-1">
+                      </div>
+                    </div>
                   </div>
-                  <div class="imgs-block__button button-prev">
-                    <i class="imgs-block__arrow prev"></i>
+                  <div class="img-slider__item">
+                    <div class="img-slider__img-block">
+                      <div class="img-slider__img">
+                        <img src="./assets/img/main/dish-2.jpg" alt="dish-1">
+                      </div>
+                    </div>
                   </div>
-                  <div class="imgs-block__button button-next">
-                    <i class="imgs-block__arrow next"></i>
+                  <div class="img-slider__item">
+                    <div class="img-slider__img-block">
+                      <div class="img-slider__img">
+                        <img src="./assets/img/main/dish-3.jpg" alt="dish-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="img-slider__button button-prev">
+                  <div class="img-slider__arrow prev"></div>
+                </div>
+                <div class="img-slider__button button-next">
+                  <div class="img-slider__arrow next"></div>
+                </div>
+              </div>
+
+
+              <!-- <div class="slider__slide slade-1">
+                <div class="slider__text-block text-block-slider">
+                  <div class="text-block-slider__body">
+                    <div class="text-block-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-block-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-block-slider text-block__title">The key to Fine dining</div>
+                    <div class="text-block-slider text-block__text">Sit tellus lobortis sed senectus vivamus molestie.
+                      Condimentum volutpat
+                      morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus</div>
+                    <div class="text-block-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__imgs-block imgs-block">
+                  <div class="imgs-block__img img">
+                    <div class="img__slider">
+                      <img src="./assets/img/main/dish-1.jpg" alt="dish-1">
+                    </div>
+                    <div class="imgs-block__button button-prev">
+                      <div class="imgs-block__arrow prev"></div>
+                    </div>
+                    <div class="imgs-block__button button-next">
+                      <div class="imgs-block__arrow next"></div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="slider__slide slade-2">
+                <div class="slider__text-block text-block-slider">
+                  <div class="text-block-slider__body">
+                    <div class="text-block-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-block-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-block-slider text-block__title">Food That Surprise You</div>
+                    <div class="text-block-slider text-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, consectetur? Enim odio nobis aliquam omnis tempora, quos harum. Explicabo, eius.</div>
+                    <div class="text-block-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__imgs-block imgs-block">
+                  <div class="imgs-block__img img">
+                    <div class="img__slider">
+                      <img src="./assets/img/main/dish-2.jpg" alt="dish-2">
+                    </div>
+                    <div class="imgs-block__button button-prev">
+                      <i class="imgs-block__arrow prev"></i>
+                    </div>
+                    <div class="imgs-block__button button-next">
+                      <i class="imgs-block__arrow next"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide slade-3">
+                <div class="slider__text-block text-block-slider">
+                  <div class="text-block-slider__body">
+                    <div class="text-block-slider text-block__subtitle">Chase the new Flavour</div>
+                    <div class="text-block-slider text-block__img">
+                      <img src="./assets/icons/spoon.svg" alt="">
+                    </div>
+                    <div class="text-block-slider text-block__title">How to prepare your grill</div>
+                    <div class="text-block-slider text-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ad dicta nam incidunt dolorem, tenetur corrupti nostrum? Laboriosam praesentium libero voluptatum voluptate. Eos corrupti nihil debitis doloribus voluptatibus maxime optio.</div>
+                    <div class="text-block-slider text-block__button button">
+                      <a href="#" class="button__block">
+                        <span class="button__text">Explore Menu</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__imgs-block imgs-block">
+                  <div class="imgs-block__img img">
+                    <div class="img__slider">
+                      <img src="./assets/img/main/dish-3.jpg" alt="dish-3">
+                    </div>
+                    <div class="imgs-block__button button-prev">
+                      <div class="imgs-block__arrow prev"></div>
+                    </div>
+                    <div class="imgs-block__button button-next">
+                      <div class="imgs-block__arrow next"></div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <section class="about">
+  <section id='about' class="about">
     <div class="about__wrapper">
       <div class="about__container">
         <div class="about__body">
@@ -134,11 +321,12 @@
       </div>
     </div>
   </section>
-  <section class="book">
+  <section id='book' class="book">
     <div class="book__wrapper">
       <div class="book__container">
-        <div class="book__img-logo">
-          <img src="./assets/icons/logo.svg" alt="logo">
+        <div class="book__img-logo img-logo">
+          <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+          <img class="logo-text rotating" src="./assets/img/logo-text.svg" alt="logo-text">
         </div>
         <div class="book__body">
           <div class="book__text-block text-block">
@@ -150,42 +338,102 @@
           </div>
           <form action="#" method="get">
             <div class="book__form">
-              <select name="person" class="input input-section">
-                <option value="1-2 person">1-2 Persons</option>
-                <option value="3-4 person">3-4 Persons</option>
-                <option value="5-6 person">5-6 Persons</option>
-                <option value="more 6 person">More 6 Persons</option>
-              </select>
-              <input type="date" class="input input__book-date">
-              <input type="time" class="input input__book-time">
+              <div class="form__block persone-form">
+                <select required name="persone" class="form__select select-persones" placeholder="1-2 Persons">
+                  <option value="1-2 person">1-2 Persons</option>
+                  <option value="3-4 person">3-4 Persons</option>
+                  <option value="5-6 person">5-6 Persons</option>
+                  <option value="more 6 person">More 6 Persons</option>
+                </select>
+                <div class="form-select__input">
+                  <div class="persone-form__view-select form-select__text">1-2 Persons</div>
+                  <object class="form-select__arrow-svg" type="image/svg+xml"
+                    data="./assets/icons/arrow-down-input.svg"></object>
+                </div>
+                <ul class="persone-form__select-clone select-clone__body"></ul>
+              </div>
+              <input required type="date" class="form__block date-form" name="date">
+              <div class="form__block time-form">
+                <select required name="time" class="form__select select-time" placeholder="10 AM">
+                  <option value="10 AM">10 AM</option>
+                  <option value="11 AM">11 AM</option>
+                  <option value="12 AM">12 AM</option>
+                  <option value="1 PM">1 PM</option>
+                  <option value="2 PM">2 PM</option>
+                  <option value="3 PM">3 PM</option>
+                  <option value="4 PM">4 PM</option>
+                  <option value="5 PM">5 PM</option>
+                  <option value="6 PM">6 PM</option>
+                </select>
+                <div class="form-select__input">
+                  <div class="date-form__view-select form-select__text">10 AM</div>
+                  <object class="form-select__arrow-svg" type="image/svg+xml"
+                    data="./assets/icons/arrow-down-input.svg"></object>
+                </div>
+                <ul class="time-form__select-clone select-clone__body"></ul>
+              </div>
             </div>
             <div class="book__button button">
-              <a href="#" class="button__block">
+              <button class="button-book button__block">
                 <span class="button__text">Book Now</span>
-              </a>
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
   </section>
-  <section class="menu-list">
+  <section id='menu' class="menu-list">
     <div class="menu-list__wrapper">
-      <div class="menu-list__container">
-        <div class="menu-list__img-logo">
-          <img src="./assets/icons/logo.svg" alt="logo">
+      <div class="menu-list__img-logo img-logo">
+        <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+        <img class="logo-text" src="./assets/img/logo-text.svg" alt="logo-text">
+      </div>
+      <div class="menu-list__body">
+        <div class="menu-list__bg">
+          <img src="./assets/img/menu/bg-menu-1.jpg" alt="food">
+          <img src="./assets/img/menu/bg-menu-2.jpg" alt="food">
+          <img src="./assets/img/menu/bg-menu-3.jpg" alt="food">
         </div>
-        <ul class="menu-list__list">
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__link" data-bg="bg-menu-1">Bar Menu</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__link" data-bg="bg-menu-3">Food Menu</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__link" data-bg="bg-menu-2">Desserts Menu</a>
-          </li>
-        </ul>
+        <div class="menu-list__item item-menu" data-bg="bg-menu-1">
+          <div class="item-menu__block">
+            <div class="item-menu__title">bar menu</div>
+            <div class="item-menu__text">
+              <div class="text text-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit.
+              </div>
+            </div>
+            <div class="item-menu__read-more text-block__read-more">
+              <span class="text text-block__line"></span>
+              <p>read more</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-list__item item-menu" data-bg="bg-menu-2">
+          <div class="item-menu__block">
+            <div class="item-menu__title">food menu</div>
+            <div class="item-menu__text">
+              <div class="text text-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit.
+              </div>
+            </div>
+            <div class="item-menu__read-more text-block__read-more">
+              <span class="text text-block__line"></span>
+              <p>read more</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-list__item item-menu" data-bg="bg-menu-3">
+          <div class="item-menu__block">
+            <div class="item-menu__title">Desserts menu</div>
+            <div class="item-menu__text">
+              <div class="text text-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit auctor sit.
+              </div>
+            </div>
+            <div class="item-menu__read-more text-block__read-more">
+              <span class="text text-block__line"></span>
+              <p>read more</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -353,12 +601,13 @@
       </div>
     </div>
   </section>
-  <section class="customers">
+  <section id='customers' class="customers">
     <div class="customers__wrapper">
-      <div class="customers__img-logo">
-        <img src="./assets/icons/logo.svg" alt="logo">
+      <div class="customers__img-logo img-logo">
+        <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+        <img class="logo-text" src="./assets/img/logo-text.svg" alt="logo-text">
       </div>
-      <div class="customers__container">  
+      <div class="customers__container">
         <div class="customers__body">
           <div class="customers__text-block">
             <div class="customers text-block__subtitle">Testimony</div>
@@ -376,7 +625,8 @@
               </div>
               <div class="block-customers__text-block">
                 <div class="block-customers text-block__text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque
+                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque
+                  scelerisque
                   congue.</div>
                 <div class="block-customers text-block__text-name">Robert Fox</div>
                 <div class="block-customers text-block__text">Chef</div>
@@ -390,7 +640,8 @@
               </div>
               <div class="block-customers__text-block">
                 <div class="block-customers text-block__text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque
+                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque
+                  scelerisque
                   congue.</div>
                 <div class="block-customers text-block__text-name">Jane Cooper</div>
                 <div class="block-customers text-block__text">Chef</div>
@@ -404,7 +655,8 @@
               </div>
               <div class="block-customers__text-block">
                 <div class="block-customers text-block__text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque
+                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque
+                  scelerisque
                   congue.</div>
                 <div class="block-customers text-block__text-name">Brooklyn Simmons</div>
                 <div class="block-customers text-block__text">Caterer</div>
@@ -418,7 +670,8 @@
               </div>
               <div class="block-customers__text-block">
                 <div class="block-customers text-block__text-italic">Lorem ipsum dolor sit amet, consectetur adipiscing
-                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque
+                  sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque
+                  scelerisque
                   congue.</div>
                 <div class="block-customers text-block__text-name">Robert Fox</div>
                 <div class="block-customers text-block__text">Chef</div>
@@ -428,19 +681,25 @@
         </div>
       </div>
     </div>
-    
   </section>
   <section class="video">
     <div class="video__wrapper">
-      <div class="video__button">
-        <img src="./assets/icons/play-button.svg" alt="">
+      <div class="css_prefix-waves">
+        <div class="waves wave-1"></div>
+        <div class="waves wave-2"></div>
+        <div class="waves wave-3"></div>
       </div>
-      <div class="video__img">
-        <img src="./assets/icons/logo.svg" alt="">
+      <div class="video__button">
+        <img data-url="WdWEMXnHBVI" src="./assets/icons/play-button.svg" alt="">
+      </div>
+
+      <div class="video__img img-logo">
+        <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+        <img class="logo-text" src="./assets/img/logo-text.svg" alt="logo-text">
       </div>
     </div>
   </section>
-  <section class="laurels">
+  <section id='awards' class="laurels">
     <div class="laurels__container">
       <div class="laurels__body">
         <div class="laurels__text-block">
@@ -496,7 +755,7 @@
       </div>
     </div>
   </section>
-  <section class="blog">
+  <section id='blog' class="blog">
     <div class="blog__container">
       <div class="blog__body">
         <div class="blog__text-block">
@@ -507,6 +766,7 @@
           <div class="blog text-block__title">Gerícht updates</div>
         </div>
         <div class="blog__cards-block">
+
           <div class="blog__cards-block-body">
             <div class="blog__card-block card-block">
               <div class="card-block__img">
@@ -568,6 +828,36 @@
                 <div class="card-block__read-more">Read More</div>
               </div>
             </div>
+            <div class="blog__card-block card-block">
+              <div class="card-block__img">
+                <img src="./assets/img/blogs/img2.png" alt="img1">
+              </div>
+              <div class="card-block__text-block">
+                <div class="card-block__date-block">
+                  <div class="card-block__date">23 May 2021</div>
+                  <div class="card-block__author">- John Micheal</div>
+                </div>
+                <div class="card-block__title">summer cocktails and mocktails</div>
+                <div class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
+                  ipsum turpis elit elit scelerisque egestas mus in.</div>
+                <div class="card-block__read-more">Read More</div>
+              </div>
+            </div>
+            <div class="blog__card-block card-block">
+              <div class="card-block__img">
+                <img src="./assets/img/blogs/img3.png" alt="img1">
+              </div>
+              <div class="card-block__text-block">
+                <div class="card-block__date-block">
+                  <div class="card-block__date">06 Aug 2021</div>
+                  <div class="card-block__author">- Fred W</div>
+                </div>
+                <div class="card-block__title">easy cooking for college students</div>
+                <div class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis
+                  ipsum turpis elit elit scelerisque egestas mus in.</div>
+                <div class="card-block__read-more">Read More</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="blog__button button">
@@ -577,11 +867,12 @@
         </div>
       </div>
     </div>
-    <div class="blog__img-logo">
-      <img src="./assets/icons/logo.svg" alt="logo">
+    <div class="blog__img-logo img-logo">
+      <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+      <img class="logo-text" src="./assets/img/logo-text.svg" alt="logo-text">
     </div>
   </section>
-  <section class="instagram">
+  <section id='gallery' class="instagram">
     <div class="instagram__wrapper">
       <div class="instagram__container">
         <div class="instagram__body">
@@ -602,23 +893,43 @@
           </div>
           <div class="instagram__img-block img-block-instagram">
             <div class="img-block-instagram__body">
-              <div class="img-block-instagram__item">
+              <div class="img-block-instagram__item item-1">
                 <img src="./assets/img/instagram/1.png" alt="1">
                 <div class="img-block-instagram__mask-hover"></div>
               </div>
-              <div class="img-block-instagram__item">
+              <div class="img-block-instagram__item item-2">
                 <img src="./assets/img/instagram/2.png" alt="2">
                 <div class="img-block-instagram__mask-hover"></div>
               </div>
-              <div class="img-block-instagram__item">
+              <div class="img-block-instagram__item item-3">
                 <img src="./assets/img/instagram/3.png" alt="3">
                 <div class="img-block-instagram__mask-hover"></div>
               </div>
-              <div class="img-block-instagram__item">
+              <div class="img-block-instagram__item item-4">
                 <img src="./assets/img/instagram/4.png" alt="4">
                 <div class="img-block-instagram__mask-hover"></div>
               </div>
-              <div class="img-block-instagram__item">
+              <div class="img-block-instagram__item item-5">
+                <img src="./assets/img/instagram/5.png" alt="5">
+                <div class="img-block-instagram__mask-hover"></div>
+              </div>
+              <div class="img-block-instagram__item item-6">
+                <img src="./assets/img/instagram/1.png" alt="1">
+                <div class="img-block-instagram__mask-hover"></div>
+              </div>
+              <div class="img-block-instagram__item item-7">
+                <img src="./assets/img/instagram/2.png" alt="2">
+                <div class="img-block-instagram__mask-hover"></div>
+              </div>
+              <div class="img-block-instagram__item item-8">
+                <img src="./assets/img/instagram/3.png" alt="3">
+                <div class="img-block-instagram__mask-hover"></div>
+              </div>
+              <div class="img-block-instagram__item item-9">
+                <img src="./assets/img/instagram/4.png" alt="4">
+                <div class="img-block-instagram__mask-hover"></div>
+              </div>
+              <div class="img-block-instagram__item item-10">
                 <img src="./assets/img/instagram/5.png" alt="5">
                 <div class="img-block-instagram__mask-hover"></div>
               </div>
@@ -628,10 +939,11 @@
       </div>
     </div>
   </section>
-  <footer class="footer">
+  <footer id='contact' class="footer">
     <div class="footer__bg-top">
-      <div class="footer__img-logo">
-        <img src="./assets/icons/logo.svg" alt="logo">
+      <div class="footer__img-logo img-logo">
+        <img class="logo-spoons" src="./assets/img/logo-spoons.svg" alt="logo-spoons">
+        <img class="logo-text" src="./assets/img/logo-text.svg" alt="logo-text">
       </div>
       <div class="footer__container">
         <div class="footer__newsletter newsletter">
@@ -646,11 +958,13 @@
             </div>
             <div class="newsletter__mail-form mail-form">
               <form action="#" class="mail-form__body">
-                <input type="mail" class="mail-form__input" placeholder="Email Address">
-                <div class="mail-form__button button">
-                  <a href="#" class="button__block">
-                    <span class="button__text">Subscribe</span>
-                  </a>
+                <div class="mail-form__block">
+                  <input required type="email" class="mail-form__input" placeholder="Email Address" name="email">
+                  <div class="mail-form__button button">
+                    <button class="button__block">
+                      <span class="button__text">Subscribe</span>
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -662,8 +976,9 @@
               <div class="contact-info__title">Contact Us</div>
               <div class="contact-info__text">9 W 53rd St, New York, NY 10019, USA</div>
               <div class="contact-info__text">
-                <p>+1 212-344-1230</p>
-                <p>+1 212-555-1230</p>
+                <a href="tel:+1 212-344-1230" class="order__login">+1 212-344-1230</a>
+                <br>
+                <a href="tel:+1 212-344-1240" class="order__login">+1 212-344-1240</a>
               </div>
             </div>
             <div class="contact-info__block">
@@ -682,7 +997,8 @@
                   <a href="https://twitter.com/"><img src="./assets/icons/twitter.svg" alt="icon twitter"></a>
                 </div>
                 <div class="social-icons__instagram">
-                  <a href="https://www.instagram.com"><img src="./assets/icons/instagram-small.svg" alt="icon instagram"></a>                  
+                  <a href="https://www.instagram.com"><img src="./assets/icons/instagram-small.svg"
+                      alt="icon instagram"></a>
                 </div>
               </div>
             </div>
@@ -705,10 +1021,10 @@
 
   </footer>
   <div class="popup__scroll scroll-popup">
-    <div class="scroll-popup__body">
+    <a href='#top' class="scroll-popup__body">
       <div class="scroll-popup__line"></div>
       <div class="scroll-popup__text">top</div>
-    </div>
+    </a>
   </div>
   <div class="popup__book book-popup">
     <div class="book-popup__wrapper">
@@ -725,7 +1041,7 @@
           </div>
           <form action="#" method="get">
             <div class="book-popup__form">
-              <select name="person" class="input input-section">
+              <select name="person" class="input-popup input-section">
                 <option value="1-2 person">1-2 Persons</option>
                 <option value="3-4 person">3-4 Persons</option>
                 <option value="5-6 person">5-6 Persons</option>
@@ -744,6 +1060,15 @@
       </div>
     </div>
   </div>
+  <div class="overlay">
+    <div class="video">
+      <div id="frame"></div>
+      <div class="close">&times;</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script src="./script.js"></script>
 </body>
 

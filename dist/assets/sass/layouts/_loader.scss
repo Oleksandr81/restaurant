@@ -1,0 +1,28 @@
+.loader {
+
+  // .loader__container
+  &__container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-main-body;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+  }
+
+  // .loader__img-logo
+  &__img-logo {}
+}
+
+.logo__item {
+  opacity: 0;
+}
+
+.logo-spoons {}
+
+.logo-text {}
+
+.rotating {}

@@ -1,6 +1,4 @@
 .popup {
-  
-  
   // .popup__book
   &__book {
     display: none;
@@ -62,22 +60,10 @@
     flex-wrap: wrap;
   }
 }
-.text-block {
-  // .text-block__subtitle
-  &__subtitle {
-  }
-  // .text-block__img
-  &__img {
-  }
-  // .text-block__title
-  &__title {
-    font-size: 3.6rem;
-  }
-}
-.input {
-
+.input-popup {
   width: 212px;
   height: 60px;
+
   // .input__book-date
   &__book-date {
   }
@@ -86,6 +72,7 @@
   }
 }
 .input-section {
+
 }
 .book {
   // .book__button

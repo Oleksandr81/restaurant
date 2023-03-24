@@ -13,9 +13,11 @@
     max-width: $block-width;
     margin: 0 auto;
     padding: 0 15px;
+    padding-top: 100px;
 
     @media(max-width: $tablet-width) {
       padding: 0 0;
+      padding-top: 100px;
     }
   }
 

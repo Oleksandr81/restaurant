@@ -1,6 +1,7 @@
 .blog {
   position: relative;
   overflow: hidden;
+
   // .blog__container
   &__container {
 
@@ -13,13 +14,16 @@
     position: absolute;
     bottom: 50px;
     right: 80px;
+
     @media(max-width: $tablet-width) {
       right: -55px;
     }
+
     @media(max-width: $mobile-big-width) {
       right: -95px;
     }
   }
+
   // .blog__body
   &__body {
     display: flex;
@@ -28,22 +32,58 @@
     padding: 152px 0;
     align-items: center;
   }
+
   // .blog__text-block
   &__text-block {
     text-align: center;
   }
+
   // .blog__cards-block
   &__cards-block {
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+
+    position: relative;
+
+    @media(max-width: $block-width) {
+      max-width: 1000px;
+    }
+    @media(max-width: $laptop-width) {
+      max-width: 700px;
+    }
+    @media(max-width: $tablet-width) {
+      max-width: 400px;
+    }
+    @media(max-width: $mobile-big-width) {
+      max-width: 280px;
+    }
   }
 
   &__cards-block-body {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    // width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    // transition: transform 0.8s ease-in-out;
+    // min-width: 0;
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (var(--grid-gap) * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: var(--grid-gap);
+    left: calc(-1 * (calc((100% - (var(--grid-gap) * (var(--per-view) - 1))) / var(--per-view)) + var(--grid-gap)) * (var(--per-view)));
+    user-select: none;
+    cursor: grab;
   }
+
   // .blog__card-block
-  &__card-block {
-  }
+  &__card-block {}
+}
+
+.swiper {
+  width: 412px;
+  height: 430px;
+}
+
+.shifting {
+  transition: left .8s ease;
 }

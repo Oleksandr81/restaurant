@@ -1,30 +1,82 @@
 .main {
+
   // .main__slider
   &__slider {
+    width: 100%;
+    max-height: 730px;
+    padding: 20px 0;
+    overflow: hidden;
   }
 }
+
 .slider {
+
+  &__body {
+    display: flex;
+    // flex-wrap: wrap;
+    gap: 50px;
+  }
+
   // .slider__slide
   &__slide {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    flex: 0 1 100%;
+    transition: all 0.5s ease;
+
+    &._hide {
+      transition: all 0.5s ease;
+      display: none;
+    }
 
     @media(max-width: $tablet-width) {
       flex-direction: column;
       gap: 45px;
     }
   }
+
   // .slider__text-block
   &__text-block {
     flex: 0 1 50%;
+    transition: all 0.5s ease-out;
+    transform: translate(0, 30%);
+    transform: scale(0.9);
+    filter: blur(5px);
+    opacity: 0;
+
+    &._show {
+      transform: scale(1);
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    &._hide {
+      transform: scale(0.9);
+      filter: blur(5px);
+      opacity: 0;
+    }
+
     @media(max-width: $tablet-width) {
       flex: 0 1 100%;
     }
   }
+
   // .slider__imgs-block
   &__imgs-block {
     flex: 0 1 50%;
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+
+    &._show {
+      opacity: 1;
+    }
+
+    &._hide {
+      opacity: 0;
+    }
+
     @media(max-width: $tablet-width) {
       flex: 0 1 100%;
     }
@@ -33,10 +85,11 @@
 
 
 .slider {
+
   // .slider__text-block
-  &__text-block {
-  }
+  &__text-block {}
 }
+
 .text-block-slider {
   max-width: 450px;
   padding-right: 15px;
@@ -45,29 +98,27 @@
     max-width: 100%;
     padding-right: 0;
   }
+
   // .text-block-slider__body
-  &__body {
-  }
+  &__body {}
 
   &.text-block {
 
     // .text-block__subtitle
-    &__subtitle {
-    }
+    &__subtitle {}
+
     // .text-block__img
-    &__img {
-    }
+    &__img {}
+
     // .text-block__title
-    &__title {
-    }
+    &__title {}
+
     // .text-block__text
     &__text {
       padding: 32px 0;
     }
+
     // .text-block__button
-    &__button {
-    }
+    &__button {}
   }
 }
-
-
